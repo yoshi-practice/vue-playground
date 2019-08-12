@@ -19,6 +19,7 @@ var app3 = new Vue({
     }
 })
 
+// リスト（繰り返し）
 var app4 = new Vue({
     el: '#app-4',
     data: {
@@ -36,6 +37,7 @@ var app4 = new Vue({
     }
 })
 
+// ユーザー入力制御
 var app5 = new Vue({
     el: '#app-5',
     data: {
@@ -45,5 +47,13 @@ var app5 = new Vue({
         reverseMessage: function() {
             this.message = this.message.split('').reverse().join('')
         }
+    }
+})
+
+// 双方向バインディング
+var app6 = new Vue({
+    el: '#app-6',
+    data: {
+        message: "Hello, Vue.js!"
     }
 })
