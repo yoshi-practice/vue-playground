@@ -44,7 +44,7 @@ var app5 = new Vue({
         message: 'hello, vue.js'
     },
     methods: {
-        reverseMessage: function() {
+        reverseMessage: function () {
             this.message = this.message.split('').reverse().join('')
         }
     }
@@ -55,5 +55,31 @@ var app6 = new Vue({
     el: '#app-6',
     data: {
         message: "Hello, Vue.js!"
+    }
+})
+
+// コンポーネント
+Vue.component('todo-item', {
+    props: ['todo'],
+    template: '<li>{{ todo.text }}</li>'
+})
+
+// コンポーネント利用
+var app7 = new Vue({
+    el: '#app-7',
+    data: {
+        groceryList: [{
+                id: 0,
+                text: 'A'
+            },
+            {
+                id: 1,
+                text: 'B'
+            },
+            {
+                id: 2,
+                text: 'C'
+            }
+        ]
     }
 })
